@@ -1,0 +1,24 @@
+{
+  "name": "notificator",
+  "version": "1.0.1",
+  "description": "Notification micro service for atlantis ",
+  "main": "server.js",
+  "scripts": {
+    "build": "babel src -d dist --copy-files",
+    "start": "nodemon index.js --exec babel-node"
+  },
+  "dependencies": {
+    "@apollo/gateway": "^2.0.3",
+    "apollo-server": "^3.7.0",
+    "graphql": "^16.5.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/node": "^7.16.5",
+    "@babel/plugin-transform-runtime": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "eslint": "^7.32.0",
+    "nodemon": "^2.0.15"
+  }
+}

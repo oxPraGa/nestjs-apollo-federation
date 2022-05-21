@@ -1,0 +1,28 @@
+type Comment @key(fields: "id") {
+  id: ID!
+  content: String
+  user: User
+}
+
+input CreateCommentInput {
+  content: String
+  user: ID
+}
+
+input UpdateCommentInput {
+  id: Int!
+}
+
+type Query {
+  comments: [Comment]!
+  comment(id: String!): Comment
+}
+
+type Mutation {
+  createComment(createCommentInput: CreateCommentInput!): Comment!
+}
+
+extend type User @key(fields: "id") {
+  id: ID! @external
+  comments: [Comment]
+}
